@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f2f5;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+  }
+  
+  .left-panel {
+    flex: 1;
+    background-image: url('churras.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .right-panel {
+    flex: 1;
+    background: white;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .right-panel h2 {
+    font-size: 28px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .right-panel p {
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .services {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .service {
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 10px;
+    background: #f1f1f1;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .service.selected {
+    background: #4fafff;
+    color: white;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  textarea {
+    height: 80px;
+    resize: none;
+    margin-bottom: 1rem;
+  }
+  
+  button[type="submit"] {
+    background: #4fafff;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background: #3b8bd8;
+  }
+  
+  .map-container {
+    margin-top: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .left-panel {
+      height: 250px;
+      padding: 2rem;
+      background-position: center;
+    }
+  
+    .right-panel {
+      padding: 2rem;
+      overflow: visible;
+    }
+  
+    .input-group {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .map-container iframe {
+      width: 100%;
+      height: 300px;
+    }
+  
+    button[type="submit"] {
+      width: 100%;
+    }
+  }
+  
